@@ -1,19 +1,24 @@
+// Navbar menu toggle
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
-menuBtn.addEventListener("click", (e) => {
+menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("open");
 
   const isOpen = navLinks.classList.contains("open");
   menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 
-navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
+// Close nav menu when a link is clicked (on mobile)
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuBtnIcon.setAttribute("class", "ri-menu-line");
+  });
 });
 
+// ScrollReveal animations
 const scrollRevealOption = {
   origin: "bottom",
   distance: "50px",
@@ -36,22 +41,10 @@ ScrollReveal().reveal(".header__btns", {
   ...scrollRevealOption,
   delay: 1500,
 });
-
-const banner = document.querySelector(".banner__container");
-
-const bannerContent = Array.from(banner.children);
-
-bannerContent.forEach((item) => {
-  const duplicateNode = item.cloneNode(true);
-  duplicateNode.setAttribute("aria-hidden", true);
-  banner.appendChild(duplicateNode);
-});
-
 ScrollReveal().reveal(".arrival__card", {
   ...scrollRevealOption,
   interval: 500,
 });
-
 ScrollReveal().reveal(".sale__image img", {
   ...scrollRevealOption,
   origin: "left",
@@ -72,8 +65,17 @@ ScrollReveal().reveal(".sale__btn", {
   ...scrollRevealOption,
   delay: 1500,
 });
-
 ScrollReveal().reveal(".favourite__card", {
   ...scrollRevealOption,
   interval: 500,
+});
+
+// Duplicate banner items for infinite scroll effect
+const banner = document.querySelector(".banner__container");
+const bannerItems = Array.from(banner.children);
+
+bannerItems.forEach((item) => {
+  const clone = item.cloneNode(true);
+  clone.setAttribute("aria-hidden", "true");
+  banner.appendChild(clone);
 });

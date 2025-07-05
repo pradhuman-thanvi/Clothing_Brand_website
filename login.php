@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = new mysqli("localhost", "root", "", "your_database");
+include 'db.php';
 
 if (isset($_POST['login'])) {
   $username = $_POST['username'];

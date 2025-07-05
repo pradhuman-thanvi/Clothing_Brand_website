@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>The Girly House</title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav__header">
-        <div class="nav__logo">
-          <a href="/index.html">THE GIRLY HOUSE</a>
-        </div>
-        <div class="nav__menu__btn" id="menu-btn">
-          <i class="ri-menu-line"></i>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet">
+  <title>The Girly House</title>
+</head>
+<body>
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo"><a href="/index.html">THE GIRLY HOUSE</a></div>
+      <div class="nav__menu__btn" id="menu-btn"><i class="ri-menu-line"></i></div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="shop.html">SHOP</a></li>
-        <li><a href="#fashion">BLOGS</a></li>
-        <li><a href="#favourite">TRENDING</a></li>
-        <li><a href="#lifestyle">LIFESTYLE</a></li>
-        <li>
-          <button class="btn">SIGN UP</button>
-        </li>
+        <li><a href="shop.php">SHOP</a></li>
+        <li><a href="shop.php">TRENDING</a></li>
+        <li><a href="shop.php">LIFESTYLE</a></li>
+        <li><a href="login.php"><button class="btn">SIGN UP</button></a></li>
       </ul>
-    </nav>
+    </div>
+  </nav>
     <header>
       <div class="section__container header__container">
         <div class="header__content">
@@ -44,63 +34,52 @@
           </h1>
           <p>Live for Trendy and innovative fashion!</p>
           <div class="header__btns">
-            <button class="btn">Shop Now</button>
+                <a href="shop.php"><button class="btn">Shop Now</button><a>
           </div>
         </div>
         <div class="header__image">
-          <img src="assets/header.png" alt="header" />
+          <img src="assets/index.png" alt="header" />
         </div>
       </div>
     </header>
 
-    <section class="banner">
-      <div class="banner__container">
-        <img src="assets/banner-1.png" alt="banner" />
-        <img src="assets/banner-2.png" alt="banner" />
-        <img src="assets/banner-3.png" alt="banner" />
-        <img src="assets/banner-4.png" alt="banner" />
-        <img src="assets/banner-5.png" alt="banner" />
-        <img src="assets/banner-6.png" alt="banner" />
-        <img src="assets/banner-7.png" alt="banner" />
-        <img src="assets/banner-8.png" alt="banner" />
-      </div>
-    </section>
+
 
     <section class="section__container arrival__container" id="catalogue">
       <h2 class="section__header">NEW ARRIVALS</h2>
       <div class="arrival__grid">
         <div class="arrival__card">
           <div class="arrival__image">
-            <img src="assets/arrival-1.jpg" alt="arrival" />
+          <a href="shop.php?category=Kurti&order=DESC">  <img src="assets/kurta.jpg" alt="arrival" /></a>
           </div>
           <div class="arrival__content">
             <div>
               <h4>Kurta's</h4>
-              <a href="#">Explore Now</a>
+              <a href="shop.php?category=Kurti&order=DESC">Explore Now</a>
             </div>
             <span><i class="ri-arrow-right-line"></i></span>
           </div>
         </div>
         <div class="arrival__card">
           <div class="arrival__image">
-            <img src="assets/arrival-2.jpg" alt="arrival" />
+             <a href="shop.php?category=Dress&order=DESC"> <img src="assets/dres.jpg" alt="arrival" /></a>
           </div>
           <div class="arrival__content">
             <div>
-              <h4>Short Tops's</h4>
-              <a href="#">Explore Now</a>
+              <h4>Trendy Dress's</h4>
+              <a href="shop.php?category=Dress&order=DESC">Explore Now</a>
             </div>
             <span><i class="ri-arrow-right-line"></i></span>
           </div>
         </div>
         <div class="arrival__card">
           <div class="arrival__image">
-            <img src="assets/arrival-3.jpg" alt="arrival" />
+            <a href="https://thegirlyhouse.infinityfreeapp.com/shop.php?category=Tops&order=DESC">  <img src="assets/jeans.jpg" alt="arrival" /></a>
           </div>
           <div class="arrival__content">
             <div>
               <h4>Jeans & More</h4>
-              <a href="#">Explore Now</a>
+              <a href="shop.php?category=Tops&order=DESC">Explore Now</a>
             </div>
             <span><i class="ri-arrow-right-line"></i></span>
           </div>
@@ -110,8 +89,8 @@
 
     <section class="sale" id="fashion">
       <div class="section__container sale__container">
-        <div class="sale__image">
-          <img src="assets/11.png" alt="sale" />
+        <div class="">
+          <img src="assets/1.png" alt="sale" />
         </div>
         <div class="sale__content">
           <h2><span>Launch Day</span><br />SALE NOW</h2>
@@ -120,7 +99,7 @@ Get Ready To Explore More.          </p>
           <h4>20 June 2025</h4>
           <p>*Terms and conditions apply</p>
           <div class="sale__btn">
-            <button class="btn">Shop Now</button>
+          <a href="shop.php">    <button class="btn">Shop Now</button></a>
           </div>
         </div>
       </div>
@@ -131,24 +110,24 @@ Get Ready To Explore More.          </p>
       <div class="favourite__grid">
         <div class="favourite__card">
           <div class="favourite__image">
-            <img src="assets/favourite-1.jpg" alt="favourite" />
+           <a href="shop.php">   <img src="assets/SALE1.png" alt="favourite" /></a>
           </div>
           <div class="favourite__content">
             <div>
               <h4>Trending on Instagram</h4>
-              <a href="#">Explore Now</a>
+              <a href="shop.php">Explore Now</a>
             </div>
             <span><i class="ri-arrow-right-line"></i></span>
           </div>
         </div>
         <div class="favourite__card">
           <div class="favourite__image">
-            <img src="assets/favourite-2.jpg" alt="favourite" />
+         <a href="shop.php">     <img src="assets/SALE2.png" alt="favourite" /></a>
           </div>
           <div class="favourite__content">
             <div>
               <h4>All Products</h4>
-              <a href="#">Explore Now</a>
+              <a href="shop.php">Explore Now</a>
             </div>
             <span><i class="ri-arrow-right-line"></i></span>
           </div>
@@ -166,7 +145,7 @@ Get Ready To Explore More.          </p>
          Get Updates About our Latest Arrivals
         </p>
         <div class="download__links">
-          <a href="#">
+          <a href="https://www.instagram.com/thegirlyyhouse/">
             <img src="assets/insta.webp" alt="apple" />
           </a>
          
@@ -191,13 +170,13 @@ Get Ready To Explore More.          </p>
       <div class="section__container footer__container">
         <div class="footer__col">
           <div class="footer__logo">
-            <a href="#">THE GIRLY HOUSE</a>
+            <a href="thegirlyhouse.infinityfree.app">THE GIRLY HOUSE</a>
           </div>
           <p>Complete your style with awesome clothes from us.</p>
           <ul class="footer__socials">
             
             <li>
-              <a target="_blank" href="https://www.instagram.com/thegirlyyhouse/"><i class="ri-instagram-line"></i></a>
+              <a target="_blank" href="https://www.instagram.com/thegirlyy.house/"><i class="ri-instagram-line"></i></a>
             </li>
            
           </ul>
@@ -207,16 +186,14 @@ Get Ready To Explore More.          </p>
           <ul class="footer__links">
             <li><a href="#">About</a></li>
             <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Careers</a></li>
+           
           </ul>
         </div>
         <div class="footer__col">
           <h4>Quick Links</h4>
           <ul class="footer__links">
-            <li><a href="#">Store Location</a></li>
+            <li><a href="#">Store Location - India</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#">Size Guide</a></li>
             <li><a href="shop.php">Shop Now</a></li>
           </ul>
         </div>
@@ -230,6 +207,8 @@ Get Ready To Explore More.          </p>
       </div>
       <div class="footer__bar">
         Copyright © 2025 The Girly House. All rights reserved.
+        <hr>
+        Developed By DDoor Tech Solutions Pvt. Ltd.
       </div>
     </footer>
 
